@@ -82,7 +82,7 @@ fileprivate let latterQuads = [  ".0",  ".1",  ".2",  ".3",  ".4",  ".5",  ".6",
 public struct IPv4Address: LosslessStringConvertible, Equatable {
     // Store the value in an array to enable simple typecasting to an array of
     // [UInt8] values.
-    fileprivate let value: UInt32;
+    internal let value: UInt32;
     
     /// Initialises a new instance with all zeroes.
     public init () {
