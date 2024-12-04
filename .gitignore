@@ -2,3 +2,4 @@
 /.build
 /Packages
 IPAddress.xcodeproj
+.swiftpm
