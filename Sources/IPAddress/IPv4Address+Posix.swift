@@ -25,4 +25,9 @@ public extension IPv4Address {
     init(fromSockAddrIn addr: sockaddr_in) {
         self.value = addr.sin_addr.s_addr  // IP address is in network byte order
     }
+
+    /// Initializes an `IPv4Address` from a 4-tuple of octets.
+    init (_ octets: (UInt8, UInt8, UInt8, UInt8)) {
+        self.value = UInt32(octets.0 << 24 | octets.1 << 16 | octets.2 << 8 | octets.3)
+    }
 }
